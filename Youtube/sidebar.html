@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side bars</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #navbar{
+            background-color: rgba(0, 0, 0, 0.90);
+            height: 100px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+        hr{
+            background-color: rgb(77, 77, 77);
+            border:none;
+            height:1px;
+        }
+        .menu-bars{
+            margin-left: 20px;
+            color: rgb(255, 255, 255, 0.75);
+            font-size: 30px;
+        }
+        .sidemenu{
+            display: flex;
+            justify-content: center;
+            position:fixed;
+            width:200px;
+            height: 100vh;
+            top:0;
+            background-color:rgba(0, 0, 0, 0.90);
+            transition: 1sec;
+        }
+        .sidemenu.active{
+            left: 0;
+            transition: 1sec;
+        }
+        .nav-home{
+            display:flex;
+            justify-content: start;
+            list-style: none;
+            padding:10px;
+            height:50px;
+        }
+        .nav-home a{
+            color:blanchedalmond;
+            font-size: 18px;
+            text-decoration: none;
+            margin-left:10px; 
+        }
+        .nav-home:hover{
+            background-color:rgb(49, 47, 47);
+        }
+        .nav-menu{
+            width:100%; 
+        }
+        .nav-icon{
+            padding-right: 15px;
+            color: grey;
+        }
+        .yt-icon{
+            color: rgb(187, 14, 14);
+        }
+        .nav-bar{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            width: 100%;
+            height:100px;
+            background-color: rgba(0, 0, 0, 0.90);
+        }
+        .home{
+            font-size: 30px;
+            padding-right: 10px;
+            padding-left: 10px;
+            color: rgb(233, 229, 229, .85);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <a href="#" class="menu-bars" id="show-menu">
+        <i class="fas fa-bars"></i>
+        </a>
+    </div>
+        <nav class="sidemenu">
+            <ul class="nav-menu">
+                <div class="nav-bar">
+                <a href="#" class="home">
+                <i class="fas fa-bars nav-mainmenu"></i>
+                </a>
+                <a href="#" class="yt-logo">
+                    <h1><i class="fab fa-youtube yt-icon">Youtube</i></h1>
+                </a>
+            </div>
+            <hr/>
+            <div class="nav-items">
+                <li class="nav-home">
+                    <a href="#"><i class="fas fa-home nav-icon"></i>Home</a> 
+                </li>
+                <li class="nav-home">
+                    <a href="#"><i class="far fa-compass nav-icon"></i>Explore</a> 
+                </li>
+                <li class="nav-home">
+                    <a href="#"><i class="fab fa-youtube nav-icon"></i>Subscibtion</a> 
+                </li>
+                <li class="nav-home">
+                    <a href="#"><i class="fas fa-book nav-icon"></i>Library</a> 
+                </li>
+                </div>
+                <hr/>
+                <div class="nav-items">
+                <li class="nav-home">
+                    <a href="#"><i class="fas fa-history nav-icon"></i>Histoy</a> 
+                </li>
+                <li class="nav-home">
+                    <a href="#"><i class="fab fa-youtube nav-icon"></i>Your videos</a> 
+                </li>
+                <li class="nav-home">
+                    <a href="#"><i class="far fa-clock nav-icon"></i>Watch later</a> 
+                </li>
+                <li class="nav-home">
+                    <a href="#"><i class="far fa-thumbs-up nav-icon"></i>Liked videos</a> 
+                </li> 
+            </div>
+            </ul>
+        </nav>
+</body>
+</html>
